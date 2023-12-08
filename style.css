@@ -1,0 +1,183 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background-color: black;
+}
+
+/* Header info: nav icon, title, ninja head */
+header {
+  grid-area: header;
+  background-color: rgb(61, 224, 126);
+  align-content: center;
+  grid-template-rows: 2rem 1fr 14rem;
+  grid-template-areas:
+    "navIcon"
+    "shopTitle"
+    "ninjaHead";
+}
+
+#navIcon {
+  grid-area: navIcon;
+  width: 2rem;
+  padding: 2rem;
+}
+
+header > h1 {
+  grid-area: shopTitle;
+  text-align: center;
+  padding: 2rem 2rem 0 2rem;
+  font-family: sans-serif;
+  font-size: 8rem;
+}
+
+#ninjaHead {
+  grid-area: ninjaHead;
+  height: 14rem;
+  width: 100%;
+}
+
+main {
+  grid-area: main;
+  background-color: black;
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+/* Member pictures with info in section: picture, title, info  */
+#photoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-content: center;
+  padding: 4rem 15% 0 15%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.photoInfo {
+  display: grid;
+  grid-template-rows: 55% 2fr 4fr 2fr;
+  grid-template-areas:
+    "smallPictures"
+    "pictureTitle"
+    "pictureInfo"
+    "money";
+  padding: 1rem 1rem 5rem 1rem;
+  color: white;
+}
+
+.smallPictures {
+  grid-area: smallPictures;
+  width: 100%;
+}
+
+.photoInfo > h2 {
+  grid-area: pictureTitle;
+  padding-top: 0.7rem;
+  font-weight: bold;
+  overflow-wrap: break-word;
+}
+
+.photoInfo > p:first-of-type {
+  grid-area: pictureInfo;
+  color: rgb(223, 223, 223);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.money {
+  grid-area: money;
+  width: fit-content;
+  align-self: center;
+  background-color: rgb(232, 63, 87);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5%;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* --- last two big items --- */
+#lastTwoItemSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  justify-content: space-around;
+  align-content: center;
+  padding: 4rem 15% 0 15%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lastTwoItemsInfo {
+  color: black;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 62% 38%;
+  grid-template-areas:
+    "lastTwoPictures"
+    "lastTwoInfoContainer";
+}
+
+.lastTwoPictures {
+  grid-area: lastTwoPictures;
+  width: 100%;
+}
+
+.lastTwoInfoContainer {
+  grid-area: lastTwoInfoContainer;
+  padding: 4rem 1rem 0rem 1rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "lastTwoTitle"
+    "lastTwoInfoText"
+    "moneyLastTwoItems";
+}
+
+.lastTwoTitle {
+  grid-area: lastTwoTitle;
+}
+
+.lastTwoItemsInfo > p:first-of-type {
+  grid-area: lastTwoInfoText;
+  color: black;
+}
+
+.moneyLastTwoItems {
+  grid-area: moneyLastTwoItems;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  height: 14rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#footerContainer {
+  justify-content: space-around;
+  padding: 0rem 8% 2% 5%;
+}
+
+.footerItem {
+}
+
+#socialMediaItems {
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.footerItem > span {
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(230, 230, 230);
+}
+
+#socialMediaItems > img {
+  width: 1rem;
+}
